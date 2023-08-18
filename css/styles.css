@@ -568,7 +568,7 @@ body {
 }
 
 .contact-form-desc {
-  color: var(--navyblue);
+  color: var(--navy-blue-modal);
   text-align: center;
   font-size: 16px;
   font-weight: 500;
@@ -580,14 +580,13 @@ body {
   margin-bottom: 8px;
 }
 .contact-form-field {
+  display: block;
   color: var(--lightslate);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.48px;
-}
-.contact-form-field {
-  display: block;
+  margin-bottom: 4px;
 }
 
 .contact-form-input {
@@ -651,12 +650,12 @@ body {
 .contact-form-checkbox-field {
   display: flex;
   align-items: center;
-  color: var(--lightslate, #8e8f99);
+  color: var(--lightslate);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.48px;
-  margin-bottom: 24px;
+  margin-bottom: 4px;
 }
 .contact-field-checkbox {
   color: var(--lightslate, #8e8f99);
