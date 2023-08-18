@@ -573,12 +573,14 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.32px;
+  letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
-.contact-form-field-desc {
+.contact-form-field-container {
+  margin-bottom: 8px;
+}
+.contact-form-field {
   color: var(--lightslate);
-
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
@@ -586,11 +588,8 @@ body {
 }
 .contact-form-field {
   display: block;
-  margin-bottom: 26px;
 }
-.contact-form-field-desc {
-  margin-bottom: 4px;
-}
+
 .contact-form-input {
   font-size: 18px;
   padding-left: 38px;
@@ -634,6 +633,7 @@ body {
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.48px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form-message::placeholder {
   color: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
