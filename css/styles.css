@@ -631,7 +631,7 @@ body {
   border-radius: 4px;
   padding: 8px 16px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
-  color: var(--navyblue-modal);
+  color: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
   background-color: transparent;
   font-size: 12px;
   font-weight: 400;
@@ -648,6 +648,7 @@ body {
 }
 
 .contact-form-message:focus {
+  color: var(--navy-blue-modal);
   border-color: var(--iris);
   outline-offset: 2px;
   outline-color: transparent;
@@ -672,15 +673,22 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.contac-form-checkbox-icon {
+
+.contact-checkbox-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
   fill: transparent;
-  padding: 4px 3px;
-  cursor: pointer;
-  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-field-checkbox:checked + .contac-form-checkbox-icon {
+.contact-field-checkbox:checked .contact-checkbox-icon-wrapper {
+  border: none;
   fill: var(--cloud);
   background-color: var(--ocean);
 }
@@ -689,14 +697,17 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
   text-align: center;
   color: var(--white);
   background-color: var(--iris);
   border: transparent;
   border-radius: 4px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form-button:hover,
 .contact-form-button:focus {
